@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="textBox">
+        <attr name="tag" format="string"/>
+        <attr name="number" format="integer"/>
+        <attr name="unit" format="string"/>
+    </declare-styleable>
+
+</resources>

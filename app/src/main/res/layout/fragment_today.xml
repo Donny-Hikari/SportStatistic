@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myCtrls="http://schemas.android.com/apk/res/com.donny.sportstatistic"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.donny.sportstatistic.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_steps"
+        android:layout_width="285dp"
+        android:layout_height="285dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/steps_circle_3" />
+
+    <FrameLayout
+        android:id="@+id/fl_center_ivSteps"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@id/iv_steps"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp" />
+
+    <TextView
+        android:id="@+id/tb_steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_center_ivSteps"
+        android:layout_centerHorizontal="true"
+        android:text="15386"
+        android:textColor="#FFFF0000"
+        android:textSize="55sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tb_steps"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Steps/步"
+        android:textColor="#FFFF0000"
+        android:textSize="30sp" />
+
+    <com.donny.sportstatistic.DTextBox
+        android:id="@+id/tb_calorie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_steps"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        myCtrls:number="18652"
+        myCtrls:tag="消耗卡路里:"
+        myCtrls:unit="    卡" />
+
+    <com.donny.sportstatistic.DTextBox
+        android:id="@+id/tb_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tb_calorie"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        myCtrls:number="24"
+        myCtrls:tag="行走里程数:"
+        myCtrls:unit="千米" />
+
+    <com.donny.sportstatistic.DTextBox
+        android:id="@+id/tb_impossible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tb_distance"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        myCtrls:number="129"
+        myCtrls:tag="引体向上:"
+        myCtrls:unit="    个" />
+
+</RelativeLayout>

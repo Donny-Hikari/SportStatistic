@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/fragment_today" />
+
+    <RadioGroup
+        android:id="@+id/rg_tabsHost"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#F4F6F8">
+
+        <RadioButton
+            android:id="@+id/rb_today"
+            android:drawableTop="@drawable/today_icon_selector"
+            style="@style/MainTabHost" />
+
+        <RadioButton
+            android:drawableTop="@drawable/trend_icon_selector"
+            style="@style/MainTabHost" />
+
+        <RadioButton
+            android:drawableTop="@drawable/setting_icon_selector"
+            style="@style/MainTabHost" />
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#80808080"
+        android:layout_above="@id/rg_tabsHost"/>
+
+</RelativeLayout>
